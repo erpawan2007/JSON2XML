@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Prepare') {
             steps {
-                sh 'RUN mkdir -p /opt/thingsConnect/config/json2xml \
+                sh 'mkdir -p /opt/thingsConnect/config/json2xml \
 					 && mkdir -p /opt/thingsConnect/lib/json2xml \
 					 && mkdir -p /opt/thingsConnect/lib/common \
 					 && mkdir -p /usr/local/bin/'
