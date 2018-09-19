@@ -12,11 +12,10 @@ pipeline {
 					 && mkdir -p /opt/thingsConnect/lib/json2xml \
 					 && mkdir -p /opt/thingsConnect/lib/common \
 					 && mkdir -p /usr/local/bin/'
-            }
-	    steps {
-                sh 'COPY config/quboid.json /opt/thingsConnect/config/json2xml/'
+		sh 'COPY config/quboid.json /opt/thingsConnect/config/json2xml/'
 		sh 'COPY config/log4j.properties /opt/thingsConnect/config/json2xml/'
             }
+	    
         }
     }
 }
