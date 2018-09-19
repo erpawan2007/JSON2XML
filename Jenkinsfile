@@ -12,8 +12,8 @@ pipeline {
 					 && mkdir -p /opt/thingsConnect/lib/json2xml \
 					 && mkdir -p /opt/thingsConnect/lib/common \
 					 && mkdir -p /usr/local/bin/'
-		sh "scp config/quboid.json /opt/thingsConnect/config/json2xml/"
-		sh "scp config/log4j.properties /opt/thingsConnect/config/json2xml/"
+		sh "cp config/quboid.json /opt/thingsConnect/config/json2xml/"
+		sh "cp config/log4j.properties /opt/thingsConnect/config/json2xml/"
             }
 	    
         }
