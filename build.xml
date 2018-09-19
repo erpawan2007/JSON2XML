@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for JSON2XML transformer">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <!--define folder properties-->
+    <property name="dir.dist" value="./dist"/>
+    <property name="dir.workspace" value="${user.home}/workspace"/>
+    <property name="dir.project" value="../"/>
+    <property name="version" value="1.0.0"/>
+    <target name="create_run_jar">
+        <mkdir dir="${dir.dist}"/>
+        <jar destfile="${dir.dist}/json2xml-${version}.jar">
+            <manifest>
+                <attribute name="Main-Class" value="io.robomq.thingsconnect.json2xml.JSON2XML"/>
+                <attribute name="Class-Path" value=". 
+                  /opt/thingsConnect/lib/quboid/quboid-1.0.jar"/>
+            </manifest>	
+            <fileset dir="${dir.project}/JSON2XML/target/classes"/>
+            <!-- <fileset dir="${dir.project}/../quboid/target/classes"/> -->
+        </jar>
+        <delete dir="${dir.project}/JSON2XML/lib"/>
+        <mkdir dir="${dir.project}/JSON2XML/lib"/>
+    </target>
+    
+    <zip destfile="${dir.dist}/json2xml.zip"
+         basedir="${dir.project}/JSON2XML/lib/"
+    />
+</project>

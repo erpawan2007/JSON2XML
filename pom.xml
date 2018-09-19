@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>io.robomq.thingsconnect.json2xml</groupId>
+	<artifactId>JSON2XML</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>JSON2XML</name>
+	
+	<dependencies>
+		<dependency>
+			<groupId>io.robomq.thingsconnect.quboid</groupId>
+			<artifactId>quboid</artifactId>
+			<version>1.6.0</version>
+		</dependency>
+		<!--	
+		<dependency>
+			<groupId>org.apache.wink</groupId>
+			<artifactId>wink-json4j-provider</artifactId>
+			<version>1.1.2-incubating</version>
+		</dependency>
+		-->
+	</dependencies>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+	
+</project>

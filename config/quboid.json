@@ -1,0 +1,55 @@
+{
+  "app": {
+    "appId": "InfoGenesis",
+    "componentId": "JSON2XML"
+  },
+  "basic": {
+    "host": "dev1.robomq.io",
+    "ssl": false,
+    "vhost": "",
+    "username": "",
+    "password": "",
+    "retryIntervalMsec": 10000,
+    "heartbeatSec": 5
+  },
+  "publisher": {
+    "publishConfirm": false,
+    "mandatory": false,
+    "bindings": [{
+      "queue": "InfoGenesis.SoapConnector.In",
+      "exchange": "global.topic",
+      "routingKey": "InfoGenesis.SoapConnector.In"
+    }],
+    "messageProperties": {
+      "contentType": "text/plain",
+      "deliveryMode": 2
+    }
+  },
+  "consumer": {
+    "qos": 1,
+    "queue": "InfoGenesis.JSON2XML.In",
+    "durable": true,
+    "exclusive": false,
+    "autoAck": false,
+    "autoDelete": false,
+    "bindings": [{
+      "exchange": "global.topic",
+      "routingKey": "InfoGenesis.JSON2XML.In"
+    }],
+    "error":{
+      "queue": "InfoGenesis.error",
+      "exchange": "global.topic",
+      "routingKey": "InfoGenesis.error"
+    },
+    "notification":{
+      "queue": "InfoGenesis.notification",
+      "exchange": "global.topic",
+      "routingKey": "InfoGenesis.notification"
+    },
+    "eventLogging": {
+      "queue": "eventlog",
+      "exchange": "global.topic",
+      "routingKey": "eventlog"
+    }
+  }
+}
